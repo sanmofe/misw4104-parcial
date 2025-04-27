@@ -1,0 +1,28 @@
+<div class="margen">
+<img src="assets/Vivero El Otoño.png" alt="Vivero El Otoño" class="logo">
+<hr>
+<img src="assets/image.png" alt="Imagen de plantas" class="plant-image">
+<hr>
+<table class="table table-striped tabla">
+    <caption>
+        Total plantas de interior: {{ numbers[0]}} <br>
+        Total plantas de exterior: {{ numbers[1]}}
+    </caption>
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre Común</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Clima</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let plant of plants">
+            <th scope="row">{{ plant.id }}</th>
+            <td>{{ plant.nombre_comun }}</td>
+            <td>{{ plant.tipo }}</td>
+            <td>{{ plant.clima }}</td>
+        </tr>
+    </tbody>
+</table>        
+</div>
